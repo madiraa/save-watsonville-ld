@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keep Watsonville L&amp;D + IICN Open | Email the PVHCD Board</title>
+<meta name="description" content="Send a personal email to the Pajaro Valley Health Care District Board about keeping labor &amp; delivery and the newborn intensive care nursery (IICN) at Watsonville Community Hospital.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keep Labor &amp; Delivery and the IICN at Watsonville Community Hospital">
+<meta property="og:description" content="The newborn IICN has been closed since July 10, 2026. Watsonville delivers ~31% of Santa Cruz County births. Send the board a quick, personal email.">
+<!-- No image asset is bundled with this single-file site. If you want a nicer link preview,
+     host a 1200x630 image somewhere and add: <meta property="og:image" content="https://..."> -->
+<!-- og:url should be set to wherever this page is actually deployed, e.g.:
+     <meta property="og:url" content="https://yourusername.github.io/save-watsonville-ld/"> -->
+<meta name="twitter:card" content="summary">
+
+<style>
+  :root{
+    --navy: #1c2b4a;
+    --navy-dark: #0f1a30;
+    --pink: #d94f79;
+    --pink-dark: #b8365d;
+    --pink-light: #fdeef3;
+    --bg: #fffaf9;
+    --ink: #1c2b4a;
+    --muted: #5a6478;
+    --border: #e7dbe0;
+    --ok: #1e7a4c;
+    --warn-bg: #fff3e0;
+    --warn-border: #e0a94f;
+    --warn-ink: #7a4a1e;
+    --focus: #0f62d6;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ -webkit-text-size-adjust: 100%; }
+  body{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  img, svg{ max-width:100%; }
+
+  a{ color: var(--pink-dark); }
+
+  .wrap{
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 18px;
+  }
+
+  /* Skip link */
+  .skip-link{
+    position:absolute;
+    left:-9999px;
+    top:0;
+    background: var(--navy);
+    color:#fff;
+    padding:12px 16px;
+    z-index:100;
+    border-radius: 0 0 8px 0;
+  }
+  .skip-link:focus{ left:0; }
+
+  /* Language bar */
+  .langbar{
+    background: var(--navy);
+    color:#fff;
+    padding:8px 0;
+  }
+  .langbar .wrap{
+    display:flex;
+    justify-content:flex-end;
+    gap:6px;
+    align-items:center;
+  }
+  .lang-btn{
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+    color:#fff;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    min-height:40px;
+  }
+  .lang-btn[aria-pressed="true"]{
+    background:#fff;
+    color: var(--navy);
+    border-color:#fff;
+  }
+  .lang-btn:focus-visible, button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  header.hero{
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color:#fff;
+    padding: 32px 0 40px;
+  }
+  header.hero h1{
+    font-size: 1.7rem;
+    line-height:1.25;
+    margin: 0 0 14px;
+  }
+  header.hero p{
+    font-size: 1.05rem;
+    color: #dfe4ee;
+    margin: 0 0 8px;
+  }
+  header.hero .stat{
+    display:inline-block;
+    background: var(--pink);
+    color:#fff;
+    font-weight:700;
+    padding:3px 10px;
+    border-radius:6px;
+  }
+
+  main{ padding-bottom: 60px; }
+
+  section{
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type{ border-bottom:none; }
+
+  h2{
+    font-size:1.3rem;
+    color: var(--navy);
+    margin: 0 0 6px;
+  }
+  .section-sub{
+    color: var(--muted);
+    margin: 0 0 18px;
+    font-size: 0.98rem;
+  }
+
+  label{
+    display:block;
+    font-weight:600;
+    margin: 16px 0 6px;
+    color: var(--navy);
+  }
+  label .opt{
+    font-weight:400;
+    color: var(--muted);
+    font-size:0.9em;
+  }
+  input[type="text"], textarea{
+    width:100%;
+    font-size:16px;
+    padding:12px 14px;
+    border: 2px solid var(--border);
+    border-radius:10px;
+    font-family:inherit;
+    background:#fff;
+    color: var(--ink);
+  }
+  input[type="text"]:focus, textarea:focus{
+    border-color: var(--pink);
+  }
+  textarea{ min-height: 90px; resize: vertical; }
+
+  .checkbox-row{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin-top:18px;
+    background: var(--pink-light);
+    padding:14px;
+    border-radius:10px;
+  }
+  .checkbox-row input[type="checkbox"]{
+    width:22px;
+    height:22px;
+    flex-shrink:0;
+    margin-top:2px;
+    accent-color: var(--pink-dark);
+  }
+  .checkbox-row label{
+    margin:0;
+    font-weight:500;
+    color: var(--ink);
+  }
+
+  .preview-box{
+    background:#fff;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    overflow:hidden;
+  }
+  .preview-box .field{
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .preview-box .field:last-child{ border-bottom:none; }
+  .preview-box .field-label{
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color: var(--muted);
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  .preview-box .to-list{ font-size:0.92rem; color: var(--ink); }
+  #subjectPreview{
+    width:100%;
+    border:none;
+    font-size:16px;
+    font-weight:700;
+    padding:0;
+    color: var(--ink);
+    font-family:inherit;
+  }
+  #bodyPreview{
+    width:100%;
+    border:none;
+    min-height:320px;
+    font-size:15.5px;
+    padding:0;
+    font-family:inherit;
+    color: var(--ink);
+    white-space:pre-wrap;
+  }
+  #subjectPreview:focus, #bodyPreview:focus{ outline: 3px solid var(--focus); outline-offset:2px; }
+
+  .reset-row{
+    margin-top:10px;
+    display:flex;
+    justify-content:flex-end;
+  }
+  .link-btn{
+    background:none;
+    border:none;
+    color: var(--pink-dark);
+    font-weight:700;
+    font-size:0.95rem;
+    cursor:pointer;
+    padding:8px 4px;
+    text-decoration: underline;
+  }
+
+  .check-panel{
+    margin-top:12px;
+    padding:14px;
+    background: var(--pink-light);
+    border-radius:10px;
+  }
+  .check-panel label{ margin-top:0; }
+  .check-attribution{
+    font-size:0.78rem;
+    color: var(--muted);
+    margin: 10px 0 0;
+  }
+
+  .check-result{
+    padding:14px;
+    border-radius:10px;
+    font-size:0.95rem;
+    border:1px solid transparent;
+  }
+  .check-result.loading{
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    border-color: var(--pink-light);
+  }
+  .check-result.yes{
+    background:#e7f5ec;
+    color: var(--ok);
+    border-color:#b9e2c8;
+  }
+  .check-result.no{
+    background: var(--warn-bg);
+    color: var(--warn-ink);
+    border-color: var(--warn-border);
+  }
+  .check-result.error{
+    background:#fdeef3;
+    color: var(--pink-dark);
+    border-color: var(--pink);
+  }
+  .check-result p{ margin:0 0 8px; }
+  .check-result p:last-child{ margin-bottom:0; }
+  .check-result .link-btn{ padding:4px 0; }
+
+  .char-warning{
+    margin-top:14px;
+    background: var(--warn-bg);
+    border:1px solid var(--warn-border);
+    color: var(--warn-ink);
+    padding:12px 14px;
+    border-radius:10px;
+    font-size:0.92rem;
+    display:none;
+  }
+  .char-warning.show{ display:block; }
+
+  .btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    min-height:52px;
+    font-size:17px;
+    font-weight:700;
+    border-radius:12px;
+    border:2px solid transparent;
+    cursor:pointer;
+    margin-top:12px;
+    padding: 10px 16px;
+    text-align:center;
+    text-decoration:none;
+    line-height:1.25;
+  }
+  .btn-primary{
+    background: var(--pink);
+    color:#fff;
+  }
+  .btn-primary:hover{ background: var(--pink-dark); }
+  .btn-secondary{
+    background:#fff;
+    color: var(--navy);
+    border-color: var(--navy);
+  }
+  .btn-secondary:hover{ background: var(--pink-light); }
+  .btn-ghost{
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    border-color: var(--pink-light);
+  }
+  .send-hint{
+    font-size:0.85rem;
+    color: var(--muted);
+    margin: 8px 0 0;
+  }
+
+  .copy-msg{
+    font-size:0.9rem;
+    color: var(--ok);
+    font-weight:700;
+    margin: 6px 0 0;
+    min-height:1.2em;
+  }
+
+  .meeting-box{
+    background: var(--navy);
+    color:#fff;
+    border-radius:14px;
+    padding: 20px;
+  }
+  .meeting-box h2{ color:#fff; }
+  .meeting-box dl{
+    margin: 14px 0 0;
+  }
+  .meeting-box dt{
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color:#b9c3da;
+    margin-top:12px;
+    font-weight:700;
+  }
+  .meeting-box dd{
+    margin:2px 0 0;
+    font-size:1.05rem;
+  }
+  .meeting-box .deadline-note{
+    margin-top:16px;
+    background: rgba(217,79,121,0.25);
+    border: 1px solid var(--pink);
+    padding:12px 14px;
+    border-radius:10px;
+    font-size:0.95rem;
+  }
+  .meeting-box a{ color: #ffd7e2; }
+
+  .share-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:10px;
+    margin-top:14px;
+  }
+  @media (min-width: 420px){
+    .share-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  .share-grid .btn{ margin-top:0; }
+
+  footer{
+    background: var(--navy-dark);
+    color:#c7cee0;
+    padding: 28px 0 40px;
+    font-size:0.9rem;
+  }
+  footer a{ color:#ffd7e2; }
+  footer p{ margin: 0 0 10px; }
+
+  .disclaimer{
+    font-weight:700;
+    color:#fff;
+  }
+
+  @media (min-width: 700px){
+    .wrap{ padding: 0 24px; }
+    header.hero h1{ font-size: 2.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="langbar">
+  <div class="wrap">
+    <button type="button" class="lang-btn" id="btnEn" aria-pressed="true">English</button>
+    <button type="button" class="lang-btn" id="btnEs" aria-pressed="false">Español</button>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1 data-i18n="hero_h1">Keep labor &amp; delivery and the newborn nursery open at Watsonville Community Hospital</h1>
+    <p data-i18n="hero_p1">The Intermediate Intensive Care Nursery (IICN) — where newborns who need extra help are cared for — has been closed since <strong>July 10, 2026</strong> because of a shortage of nursing staff.</p>
+    <p data-i18n="hero_p2">Watsonville Community Hospital delivers about <span class="stat">31%</span> of all babies born in Santa Cruz County. Many families in the Pajaro Valley worry that labor &amp; delivery could be affected next.</p>
+    <p data-i18n="hero_p3"><em>The District Board has not announced a scheduled vote to close labor &amp; delivery. This site is about asking them to keep it open and to fix the IICN staffing problem — not reacting to a vote that has been announced.</em></p>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <!-- 2. FORM -->
+    <section id="formSection">
+      <h2 data-i18n="form_h2">Tell your story (optional but powerful)</h2>
+      <p class="section-sub" data-i18n="form_sub">A few details make your email real to the board. Nothing here is shared anywhere except in the email you personally send.</p>
+
+      <label for="firstName" data-i18n="label_first">First name</label>
+      <input type="text" id="firstName" name="firstName" autocomplete="given-name">
+
+      <label for="lastName" data-i18n="label_last">Last name</label>
+      <input type="text" id="lastName" name="lastName" autocomplete="family-name">
+
+      <label for="cityZip" data-i18n="label_cityzip">City / ZIP code</label>
+      <input type="text" id="cityZip" name="cityZip" autocomplete="postal-code" placeholder="Watsonville, 95076">
+
+      <label for="story" data-i18n="label_story">Your story <span class="opt" data-i18n="label_story_opt">(optional)</span></label>
+      <textarea id="story" name="story" data-i18n-placeholder="story_placeholder" placeholder="&quot;I was born here.&quot; &quot;I delivered my baby here.&quot; &quot;Salinas or Santa Cruz is too far for me.&quot;"></textarea>
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="isResident">
+        <label for="isResident" data-i18n="label_resident">I am a resident of the Pajaro Valley Health Care District, and I want the email to say so.</label>
+      </div>
+
+      <button type="button" class="link-btn" id="checkToggleBtn" aria-expanded="false" aria-controls="addressCheckPanel" data-i18n="check_toggle" style="margin-top:8px;">Not sure? Check your address</button>
+
+      <div id="addressCheckPanel" class="check-panel" hidden>
+        <label for="addressInput" data-i18n="check_label">Street address, city, ZIP</label>
+        <input type="text" id="addressInput" name="addressInput" autocomplete="street-address" placeholder="123 Main St, Watsonville, CA 95076">
+        <button type="button" class="btn btn-secondary" id="checkAddressBtn" data-i18n="check_button" style="margin-top:10px;">Check my address</button>
+
+        <div id="checkResult" role="status" aria-live="polite" style="margin-top:14px;"></div>
+
+        <p class="check-attribution" data-i18n="check_attribution">Address lookup by OpenStreetMap Nominatim. District boundary from PVHCD's official zone map.</p>
+      </div>
+    </section>
+
+    <!-- 3. EMAIL PREVIEW -->
+    <section id="previewSection">
+      <h2 data-i18n="preview_h2">Your email</h2>
+      <p class="section-sub" data-i18n="preview_sub">Edit anything below — personalized emails carry more weight than identical form letters.</p>
+
+      <div class="preview-box">
+        <div class="field">
+          <div class="field-label" data-i18n="preview_to">To</div>
+          <div class="to-list" id="toList"></div>
+        </div>
+        <div class="field">
+          <div class="field-label" data-i18n="preview_subject">Subject</div>
+          <input type="text" id="subjectPreview">
+        </div>
+        <div class="field">
+          <div class="field-label" data-i18n="preview_body">Message</div>
+          <textarea id="bodyPreview"></textarea>
+        </div>
+      </div>
+      <div class="reset-row">
+        <button type="button" class="link-btn" id="resetBtn" data-i18n="preview_reset">Reset to template</button>
+      </div>
+
+      <div class="char-warning" id="charWarning" role="status"></div>
+    </section>
+
+    <!-- 4. SEND OPTIONS -->
+    <section id="sendSection">
+      <h2 data-i18n="send_h2">Send it</h2>
+      <p class="section-sub" data-i18n="send_sub">Sends from your own email app — nothing passes through this website.</p>
+
+      <a class="btn btn-primary" id="gmailBtn" href="#" target="_blank" rel="noopener" data-i18n="send_gmail">Open in Gmail</a>
+      <a class="btn btn-secondary" id="mailtoBtn" href="#" data-i18n="send_mailto">Open email app</a>
+      <p class="send-hint" data-i18n="send_mailto_hint">If "Open email app" opens a blank browser tab instead of your mail app, your computer doesn't have a default email app set — use "Open in Gmail" or "Copy email text" instead.</p>
+      <button type="button" class="btn btn-ghost" id="copyEmailBtn" data-i18n="send_copy_email">Copy email text</button>
+      <p class="copy-msg" id="copyEmailMsg" aria-live="polite"></p>
+      <button type="button" class="btn btn-ghost" id="copyAddrBtn" data-i18n="send_copy_addr">Copy board email addresses</button>
+      <p class="copy-msg" id="copyAddrMsg" aria-live="polite"></p>
+    </section>
+
+    <!-- 5. SPEAK AT MEETING -->
+    <section id="meetingSection">
+      <div class="meeting-box">
+        <h2 data-i18n="meeting_h2">Speak at the board meeting</h2>
+        <p data-i18n="meeting_p" style="color:#dfe4ee; margin:8px 0 0;">You can also speak directly to the board during public comment.</p>
+        <dl>
+          <dt data-i18n="meeting_when">When</dt>
+          <dd id="meetingWhen"></dd>
+          <dt data-i18n="meeting_where">Where</dt>
+          <dd id="meetingWhere"></dd>
+          <dt data-i18n="meeting_zoom">Zoom (remote option)</dt>
+          <dd><a id="meetingZoom" href="#" target="_blank" rel="noopener"></a></dd>
+          <dt data-i18n="meeting_agenda">Meeting page / agenda</dt>
+          <dd><a id="meetingAgenda" href="#" target="_blank" rel="noopener" data-i18n="meeting_agenda_link">Official meeting page (pvhcd.org)</a></dd>
+        </dl>
+        <div class="deadline-note" id="meetingDeadline"></div>
+        <button type="button" class="btn btn-secondary" id="icsBtn" data-i18n="meeting_ics" style="margin-top:16px;">Add to calendar</button>
+      </div>
+    </section>
+
+    <!-- 6. SHARE -->
+    <section id="shareSection">
+      <h2 data-i18n="share_h2">Share this with your community</h2>
+      <p class="section-sub" data-i18n="share_sub">The more families the board hears from, the harder this is to ignore.</p>
+      <div class="share-grid">
+        <button type="button" class="btn btn-primary" id="webShareBtn" data-i18n="share_native">Share</button>
+        <button type="button" class="btn btn-secondary" id="copyLinkBtn" data-i18n="share_copylink">Copy link</button>
+      </div>
+      <p class="copy-msg" id="shareMsg" aria-live="polite"></p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="disclaimer" data-i18n="footer_disclaimer">Independent community effort. Not affiliated with Watsonville Community Hospital or the Pajaro Valley Health Care District.</p>
+    <p data-i18n="footer_directory_wrap">Official board member list: <a href="https://www.pvhcd.org/district-board-directors" target="_blank" rel="noopener" data-i18n="footer_directory_link">pvhcd.org/district-board-directors</a></p>
+    <p id="lastUpdated"></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ============================================================
+     EDITABLE CONFIG
+     ============================================================ */
+
+  // Board member email addresses. Edit this list to add/remove recipients.
+  var BOARD_MEMBERS = [
+    { name: "Emily Balli",        email: "Emily.Balli@pvhcd.org" },
+    { name: "Tony Nunez",         email: "Tony.Nunez@pvhcd.org" },
+    { name: "Alexandra Friel",    email: "Alexandra.Friel@pvhcd.org" },
+    { name: "Joe Gallagher",      email: "Joe.Gallagher@pvhcd.org" },
+    { name: "Marcus Pimentel",    email: "Marcus.Pimentel@pvhcd.org" }
+  ];
+
+  // Meeting details. Edit here to update the "Speak at the meeting" box everywhere.
+  var MEETING = {
+    dateEn: "Wednesday, September 30, 2026",
+    dateEs: "miércoles, 30 de septiembre de 2026", // TRANSLATION REVIEW: confirm natural date phrasing
+    time: "5:15 PM",
+    address: "Community Room, 85 Nielson St, Watsonville, CA",
+    zoomUrl: "https://us06web.zoom.us/s/82738539287",
+    zoomLabel: "us06web.zoom.us/s/82738539287",
+    agendaUrl: "https://www.pvhcd.org/district-board-directors/meeting/september-30-2026-district-regular-board-meeting",
+    emailDeadlineEn: "Send your email before 4:00 PM on meeting day (Sept 30) so board members can read it beforehand.",
+    emailDeadlineEs: "Envíe su correo antes de las 4:00 p.m. el día de la reunión (30 de septiembre) para que los miembros de la junta puedan leerlo antes." // TRANSLATION REVIEW
+  };
+
+  var LAST_UPDATED = "2026-09-24";
+  var MAILTO_WARN_LIMIT = 1800; // characters; some phone mail apps truncate/fail above this
+
+  // Address-in-district check: geocode with OpenStreetMap's Nominatim (free, no key,
+  // CORS-enabled — the US Census geocoder was tried first but sends no CORS headers,
+  // so it can't be called from browser JS), then point-in-polygon test against the
+  // district's own official zone map (ArcGIS FeatureServer used by drawpajaro.org,
+  // the district's public redistricting site). The zones tile the entire district,
+  // so "any zone matched" == inside district.
+  var NOMINATIM_URL = "https://nominatim.openstreetmap.org/search";
+  // Loose bounding box around the South Santa Cruz / North Monterey coast to bias
+  // (not restrict — bounded=0) results toward the district's actual area.
+  var NOMINATIM_VIEWBOX = "-122.05,37.05,-121.60,36.70";
+  var DISTRICT_QUERY_URL = "https://services1.arcgis.com/jJfZghspGKh8J9Jm/arcgis/rest/services/Pajaro_Valley_Healthcare_District/FeatureServer/0/query";
+  var DISTRICT_MAP_URL = "https://ndcresearch.maps.arcgis.com/apps/webappviewer/index.html?id=4230c66f8c114a31af5048e62aa93631";
+
+  /* ============================================================
+     UI STRINGS
+     ============================================================ */
+
+  var STR = {
+    en: {
+      hero_h1: "Keep labor & delivery and the newborn nursery open at Watsonville Community Hospital",
+      hero_p1: "The Intermediate Intensive Care Nursery (IICN) — where newborns who need extra help are cared for — has been closed since <strong>July 10, 2026</strong> because of a shortage of nursing staff.",
+      hero_p2: 'Watsonville Community Hospital delivers about <span class="stat">31%</span> of all babies born in Santa Cruz County. Many families in the Pajaro Valley worry that labor & delivery could be affected next.',
+      hero_p3: "<em>The District Board has not announced a scheduled vote to close labor & delivery. This site is about asking them to keep it open and to fix the IICN staffing problem — not reacting to a vote that has been announced.</em>",
+      check_toggle: "Not sure? Check your address",
+      check_toggle_hide: "Hide address check",
+      check_label: "Street address, city, ZIP",
+      check_button: "Check my address",
+      check_checking: "Checking…",
+      check_yes_title: "Yes — this address is in the district.",
+      check_yes_body: "Matched address: {addr}",
+      check_yes_action: "Mark me as a resident in my email",
+      check_yes_marked: "Done — your email above now says you're a resident.",
+      check_no_title: "This address doesn't appear to be in the district.",
+      check_no_body: "Matched address: {addr}. You can still email the board as a concerned community member — just leave the resident box unchecked.",
+      check_notfound_title: "We couldn't find that address.",
+      check_notfound_body: "Try adding the city and ZIP code, or check the official district boundary map.",
+      check_error_title: "Couldn't check right now.",
+      check_error_body: "This check relies on two outside public services (an OpenStreetMap address lookup and the district's official boundary map) and one of them didn't respond. Try again in a moment, or check the map directly.",
+      check_official_map: "View official district boundary map",
+      check_empty: "Enter an address first.",
+      check_attribution: "Address lookup by OpenStreetMap Nominatim. District boundary from PVHCD's official zone map.",
+      form_h2: "Tell your story (optional but powerful)",
+      form_sub: "A few details make your email real to the board. Nothing here is shared anywhere except in the email you personally send.",
+      label_first: "First name",
+      label_last: "Last name",
+      label_cityzip: "City / ZIP code",
+      label_story: "Your story",
+      label_story_opt: "(optional)",
+      story_placeholder: "\"I was born here.\" \"I delivered my baby here.\" \"Salinas or Santa Cruz is too far for me.\"",
+      label_resident: "I am a resident of the Pajaro Valley Health Care District, and I want the email to say so.",
+      preview_h2: "Your email",
+      preview_sub: "Edit anything below — personalized emails carry more weight than identical form letters.",
+      preview_to: "To",
+      preview_subject: "Subject",
+      preview_body: "Message",
+      preview_reset: "Reset to template",
+      send_h2: "Send it",
+      send_sub: "Sends from your own email app — nothing passes through this website.",
+      send_mailto: "Open email app",
+      send_mailto_hint: "If \"Open email app\" opens a blank browser tab instead of your mail app, your computer doesn't have a default email app set — use \"Open in Gmail\" or \"Copy email text\" instead.",
+      send_gmail: "Open in Gmail",
+      send_copy_email: "Copy email text",
+      send_copy_addr: "Copy board email addresses",
+      copied: "Copied!",
+      char_warning: "This message is long ({n} characters). Some phones may cut it off or fail to open your email app with the \"Open email app\" button — if that happens, use \"Open in Gmail\" or \"Copy email text\" instead.",
+      meeting_h2: "Speak at the board meeting",
+      meeting_p: "You can also speak directly to the board during public comment.",
+      meeting_when: "When",
+      meeting_where: "Where",
+      meeting_zoom: "Zoom (remote option)",
+      meeting_agenda: "Meeting page / agenda",
+      meeting_agenda_link: "Official meeting page (pvhcd.org)",
+      meeting_ics: "Add to calendar (.ics)",
+      meeting_deadline_label: "Before the meeting:",
+      share_h2: "Share this with your community",
+      share_sub: "The more families the board hears from, the harder this is to ignore.",
+      share_native: "Share",
+      share_copylink: "Copy link",
+      share_text: "The IICN newborn nursery at Watsonville Community Hospital has been closed since July 10, 2026, and our community is worried labor & delivery could be next. Watsonville delivers ~31% of Santa Cruz County's births. Please read and email the district board — it takes 2 minutes:",
+      link_copied: "Link copied!",
+      footer_disclaimer: "Independent community effort. Not affiliated with Watsonville Community Hospital or the Pajaro Valley Health Care District.",
+      footer_directory_wrap: "Official board member list: ",
+      footer_directory_link: "pvhcd.org/district-board-directors",
+      last_updated: "Last updated: {date}",
+      to_more: "and {n} more"
+    },
+    es: {
+      hero_h1: "Mantengamos abierta la sala de partos y la sala de cuidados del recién nacido en Watsonville Community Hospital",
+      hero_p1: "La Sala de Cuidados Intensivos Intermedios para recién nacidos (IICN, por sus siglas en inglés) — donde se atiende a los bebés que necesitan cuidados adicionales — está cerrada desde el <strong>10 de julio de 2026</strong> debido a la falta de personal de enfermería.", // TRANSLATION REVIEW: "IICN" term — confirm hospital's own Spanish name for this unit
+      hero_p2: 'El Hospital Comunitario de Watsonville atiende aproximadamente el <span class="stat">31%</span> de todos los nacimientos del condado de Santa Cruz. A muchas familias del Valle de Pajaro les preocupa que la sala de partos sea la próxima en verse afectada.', // TRANSLATION REVIEW: "sala de partos" vs "trabajo de parto y parto" for "Labor & Delivery"
+      hero_p3: "<em>La Junta Directiva del Distrito no ha anunciado una votación programada para cerrar la sala de partos. Este sitio busca pedirles que la mantengan abierta y que resuelvan el problema de personal en la IICN — no es una reacción a una votación ya anunciada.</em>",
+      check_toggle: "¿No está seguro? Verifique su dirección", // TRANSLATION REVIEW
+      check_toggle_hide: "Ocultar verificación de dirección",
+      check_label: "Dirección, ciudad, código postal",
+      check_button: "Verificar mi dirección",
+      check_checking: "Verificando…",
+      check_yes_title: "Sí — esta dirección está dentro del distrito.",
+      check_yes_body: "Dirección encontrada: {addr}",
+      check_yes_action: "Marcarme como residente en mi correo",
+      check_yes_marked: "Listo — su correo arriba ahora indica que usted es residente.",
+      check_no_title: "Esta dirección no parece estar dentro del distrito.",
+      check_no_body: "Dirección encontrada: {addr}. Aún puede enviar un correo a la junta como miembro preocupado de la comunidad — solo deje la casilla de residente sin marcar.",
+      check_notfound_title: "No pudimos encontrar esa dirección.",
+      check_notfound_body: "Intente agregar la ciudad y el código postal, o consulte el mapa oficial del límite del distrito.",
+      check_error_title: "No se pudo verificar en este momento.",
+      check_error_body: "Esta verificación depende de dos servicios públicos externos (una búsqueda de direcciones de OpenStreetMap y el mapa oficial del distrito) y uno de ellos no respondió. Intente de nuevo en un momento, o consulte el mapa directamente.", // TRANSLATION REVIEW
+      check_official_map: "Ver mapa oficial del límite del distrito",
+      check_empty: "Primero escriba una dirección.",
+      check_attribution: "Búsqueda de direcciones por OpenStreetMap Nominatim. Límite del distrito según el mapa oficial de zonas del PVHCD.", // TRANSLATION REVIEW
+      form_h2: "Comparta su historia (opcional, pero poderoso)",
+      form_sub: "Unos cuantos detalles hacen que su correo se sienta real para la junta. Esta información no se comparte con nadie, excepto en el correo que usted mismo envíe.",
+      label_first: "Nombre",
+      label_last: "Apellido",
+      label_cityzip: "Ciudad / código postal",
+      label_story: "Su historia",
+      label_story_opt: "(opcional)",
+      story_placeholder: "«Nací aquí.» «Di a luz aquí.» «Salinas o Santa Cruz me queda demasiado lejos.»", // TRANSLATION REVIEW
+      label_resident: "Soy residente del Distrito de Salud de Pajaro Valley y quiero que el correo lo mencione.",
+      preview_h2: "Su correo",
+      preview_sub: "Edite lo que quiera — un correo personalizado tiene más peso que una carta idéntica a las demás.",
+      preview_to: "Para",
+      preview_subject: "Asunto",
+      preview_body: "Mensaje",
+      preview_reset: "Restablecer plantilla",
+      send_h2: "Envíelo",
+      send_sub: "Se envía desde su propia aplicación de correo — nada pasa por este sitio web.",
+      send_mailto: "Abrir aplicación de correo",
+      send_mailto_hint: "Si \"Abrir aplicación de correo\" abre una pestaña en blanco en vez de su aplicación de correo, su computadora no tiene una aplicación de correo predeterminada — use \"Abrir en Gmail\" o \"Copiar texto del correo\" en su lugar.", // TRANSLATION REVIEW
+      send_gmail: "Abrir en Gmail",
+      send_copy_email: "Copiar texto del correo",
+      send_copy_addr: "Copiar correos de la junta",
+      copied: "¡Copiado!",
+      char_warning: "Este mensaje es largo ({n} caracteres). En algunos teléfonos el botón \"Abrir aplicación de correo\" podría fallar o cortar el texto — si eso pasa, use \"Abrir en Gmail\" o \"Copiar texto del correo\".",
+      meeting_h2: "Hable en la reunión de la junta",
+      meeting_p: "También puede hablar directamente con la junta durante el período de comentario público.",
+      meeting_when: "Cuándo",
+      meeting_where: "Dónde",
+      meeting_zoom: "Zoom (opción remota)",
+      meeting_agenda: "Página de la reunión / agenda",
+      meeting_agenda_link: "Página oficial de la reunión (pvhcd.org)", // TRANSLATION REVIEW
+      meeting_ics: "Agregar al calendario (.ics)",
+      meeting_deadline_label: "Antes de la reunión:",
+      share_h2: "Comparta esto con su comunidad",
+      share_sub: "Mientras más familias escuche la junta, más difícil será ignorarlas.",
+      share_native: "Compartir",
+      share_copylink: "Copiar enlace",
+      share_text: "La sala de cuidados del recién nacido (IICN) en Watsonville Community Hospital está cerrada desde el 10 de julio de 2026, y a nuestra comunidad le preocupa que la sala de partos sea la próxima. Watsonville atiende ~31% de los nacimientos del condado de Santa Cruz. Lea esto y envíe un correo a la junta del distrito — toma 2 minutos:", // TRANSLATION REVIEW
+      link_copied: "¡Enlace copiado!",
+      footer_disclaimer: "Esfuerzo comunitario independiente. No está afiliado con Watsonville Community Hospital ni con el Distrito de Salud de Pajaro Valley.",
+      footer_directory_wrap: "Lista oficial de la junta directiva: ",
+      footer_directory_link: "pvhcd.org/district-board-directors",
+      last_updated: "Última actualización: {date}",
+      to_more: "y {n} más"
+    }
+  };
+
+  /* ============================================================
+     EMAIL TEMPLATE
+     ============================================================ */
+
+  function subjectFor(lang){
+    if (lang === "es"){
+      // TRANSLATION REVIEW: natural but keeps meaning identical to English subject
+      return "Por favor, mantengan la sala de partos y la IICN en Watsonville Community Hospital";
+    }
+    return "Please keep labor & delivery and the IICN at Watsonville Community Hospital";
+  }
+
+  function bodyFor(lang, data){
+    var first = data.firstName.trim();
+    var last = data.lastName.trim();
+    var fullName = (first + " " + last).trim();
+    var cityZip = data.cityZip.trim();
+    var story = data.story.trim();
+
+    if (lang === "es"){
+      var greetName = fullName || "[su nombre]";
+      var lines = [];
+      lines.push("Estimados miembros de la Junta Directiva del Distrito de Salud de Pajaro Valley:");
+      lines.push("");
+      var introLine = "Me llamo " + greetName + (cityZip ? (" y vivo en " + cityZip + ".") : ".");
+      lines.push(introLine);
+      if (data.isResident){
+        lines.push("Soy residente del Distrito de Salud de Pajaro Valley.");
+      }
+      if (story){
+        lines.push(story);
+      }
+      lines.push("");
+      // TRANSLATION REVIEW: "IICN" + "sala de partos" phrasing, confirm against hospital's own terms
+      lines.push("Les escribo porque la Sala de Cuidados Intensivos Intermedios para recién nacidos (IICN) del Hospital Comunitario de Watsonville está cerrada desde el 10 de julio de 2026 debido a la falta de personal de enfermería. Watsonville atiende aproximadamente el 31% de los partos del condado de Santa Cruz, y me preocupa lo que la presión continua sobre los servicios de maternidad signifique para el acceso de nuestra comunidad a una atención segura y cercana.");
+      lines.push("");
+      lines.push("Le pido a la Junta que:");
+      lines.push("1. Reabra la IICN tan pronto como sea seguro hacerlo, y comparta un cronograma público para lograrlo.");
+      lines.push("2. Se comprometa públicamente a mantener abiertos los servicios de sala de partos en el Hospital Comunitario de Watsonville.");
+      lines.push("3. Invierta en el reclutamiento y la retención de personal de enfermería, para que estos servicios esenciales cuenten con personal de manera confiable.");
+      lines.push("");
+      lines.push("Gracias por su servicio a nuestra comunidad y por considerar esta solicitud.");
+      lines.push("");
+      lines.push("Atentamente,");
+      lines.push(fullName || "[su nombre]");
+      if (cityZip) lines.push(cityZip);
+      return lines.join("\n");
+    }
+
+    var greetNameEn = fullName || "[your name]";
+    var linesEn = [];
+    linesEn.push("Dear Pajaro Valley Health Care District Board,");
+    linesEn.push("");
+    var introLineEn = "My name is " + greetNameEn + (cityZip ? (", and I live in " + cityZip + ".") : ".");
+    linesEn.push(introLineEn);
+    if (data.isResident){
+      linesEn.push("I am a resident of the Pajaro Valley Health Care District.");
+    }
+    if (story){
+      linesEn.push(story);
+    }
+    linesEn.push("");
+    linesEn.push("I'm writing because the Intermediate Intensive Care Nursery (IICN/NICU) at Watsonville Community Hospital has been closed since July 10, 2026 due to nurse staffing shortages. Watsonville delivers about 31% of all births in Santa Cruz County, and I'm concerned about what continued strain on labor & delivery services means for our community's access to safe, local care.");
+    linesEn.push("");
+    linesEn.push("I'm asking the Board to:");
+    linesEn.push("1. Reopen the IICN as soon as it is safely possible, and share a public timeline for doing so.");
+    linesEn.push("2. Publicly commit to keeping labor & delivery services open at Watsonville Community Hospital.");
+    linesEn.push("3. Invest in nurse recruitment and retention so these essential services are staffed reliably.");
+    linesEn.push("");
+    linesEn.push("Thank you for your service to our community, and for considering this request.");
+    linesEn.push("");
+    linesEn.push("Sincerely,");
+    linesEn.push(fullName || "[your name]");
+    if (cityZip) linesEn.push(cityZip);
+    return linesEn.join("\n");
+  }
+
+  /* ============================================================
+     ICS CALENDAR INVITE
+     ============================================================ */
+
+  // Sept 30, 2026, 5:15 PM Pacific Daylight Time = 00:15 UTC Oct 1, 2026.
+  // Using UTC (Z) times avoids relying on calendar apps to resolve an IANA TZID.
+  var MEETING_START_UTC = "20261001T001500Z";
+  var MEETING_END_UTC   = "20261001T021500Z"; // estimated 2-hour meeting window
+
+  function icsEscape(str){
+    return String(str)
+      .replace(/\\/g, "\\\\")
+      .replace(/;/g, "\\;")
+      .replace(/,/g, "\\,")
+      .replace(/\n/g, "\\n");
+  }
+
+  function foldLine(line){
+    // RFC5545: lines >75 octets should be folded with CRLF + space
+    var out = [];
+    while (line.length > 74){
+      out.push(line.slice(0, 74));
+      line = " " + line.slice(74);
+    }
+    out.push(line);
+    return out.join("\r\n");
+  }
+
+  function generateICS(){
+    var summary = "PVHCD District Regular Board Meeting";
+    var descriptionLines = [
+      "Public comment on keeping labor & delivery and the IICN open at Watsonville Community Hospital.",
+      "Zoom: " + MEETING.zoomUrl,
+      "Meeting page / agenda: " + MEETING.agendaUrl,
+      "Tip: send your email to the board before 4:00 PM on meeting day so they can read it beforehand."
+    ];
+    var description = descriptionLines.join("\n");
+    var dtstamp = new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+    var uid = "pvhcd-board-meeting-20260930@save-watsonville-ld";
+
+    var lines = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//Save Watsonville L&D and IICN//EN",
+      "CALSCALE:GREGORIAN",
+      "METHOD:PUBLISH",
+      "BEGIN:VEVENT",
+      "UID:" + uid,
+      "DTSTAMP:" + dtstamp,
+      "DTSTART:" + MEETING_START_UTC,
+      "DTEND:" + MEETING_END_UTC,
+      "SUMMARY:" + icsEscape(summary),
+      "DESCRIPTION:" + icsEscape(description),
+      "LOCATION:" + icsEscape(MEETING.address + " (or via Zoom: " + MEETING.zoomUrl + ")"),
+      "URL:" + MEETING.agendaUrl,
+      "END:VEVENT",
+      "END:VCALENDAR"
+    ];
+
+    return lines.map(foldLine).join("\r\n") + "\r\n";
+  }
+
+  function downloadICS(){
+    var ics = generateICS();
+    var blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "pvhcd-board-meeting-2026-09-30.ics";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+  }
+
+  /* ============================================================
+     ADDRESS-IN-DISTRICT CHECK
+     ============================================================ */
+
+  function renderCheckResult(html, cls){
+    els.checkResult.className = "check-result " + cls;
+    els.checkResult.innerHTML = html;
+  }
+
+  function clearCheckResult(){
+    els.checkResult.className = "";
+    els.checkResult.innerHTML = "";
+  }
+
+  function mapLinkHtml(){
+    return '<p><a href="' + DISTRICT_MAP_URL + '" target="_blank" rel="noopener">' + t("check_official_map") + "</a></p>";
+  }
+
+  function onMarkResidentClick(){
+    els.isResident.checked = true;
+    onFormInput();
+    renderCheckResult(
+      "<p>" + t("check_yes_title") + "</p><p>" + t("check_yes_marked") + "</p>",
+      "yes"
+    );
+  }
+
+  function runAddressCheck(){
+    var address = els.addressInput.value.trim();
+    if (!address){
+      renderCheckResult("<p>" + t("check_empty") + "</p>", "error");
+      return;
+    }
+
+    els.checkAddressBtn.disabled = true;
+    renderCheckResult("<p>" + t("check_checking") + "</p>", "loading");
+
+    var geocodeUrl = NOMINATIM_URL + "?q=" + encodeURIComponent(address) +
+      "&format=jsonv2&limit=1&countrycodes=us&viewbox=" + NOMINATIM_VIEWBOX + "&bounded=0";
+
+    fetch(geocodeUrl, { headers: { "Accept": "application/json" } })
+      .then(function(res){ return res.json(); })
+      .then(function(data){
+        if (!data || data.length === 0){
+          renderCheckResult(
+            "<p>" + t("check_notfound_title") + "</p><p>" + t("check_notfound_body") + "</p>" + mapLinkHtml(),
+            "error"
+          );
+          els.checkAddressBtn.disabled = false;
+          return;
+        }
+
+        var match = data[0];
+        var matchedAddr = match.display_name;
+        var x = parseFloat(match.lon);
+        var y = parseFloat(match.lat);
+
+        var queryUrl = DISTRICT_QUERY_URL + "?geometry=" + encodeURIComponent(x + "," + y) +
+          "&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects" +
+          "&outFields=Name&returnGeometry=false&f=json";
+
+        fetch(queryUrl)
+          .then(function(res){ return res.json(); })
+          .then(function(districtData){
+            var inDistrict = districtData && districtData.features && districtData.features.length > 0;
+            if (inDistrict){
+              renderCheckResult(
+                "<p>" + t("check_yes_title") + "</p>" +
+                "<p>" + t("check_yes_body").replace("{addr}", matchedAddr) + "</p>" +
+                '<button type="button" class="link-btn" id="markResidentBtn">' + t("check_yes_action") + "</button>",
+                "yes"
+              );
+              var btn = document.getElementById("markResidentBtn");
+              if (btn) btn.addEventListener("click", onMarkResidentClick);
+            } else {
+              renderCheckResult(
+                "<p>" + t("check_no_title") + "</p>" +
+                "<p>" + t("check_no_body").replace("{addr}", matchedAddr) + "</p>" + mapLinkHtml(),
+                "no"
+              );
+            }
+            els.checkAddressBtn.disabled = false;
+          })
+          .catch(function(){
+            renderCheckResult(
+              "<p>" + t("check_error_title") + "</p><p>" + t("check_error_body") + "</p>" + mapLinkHtml(),
+              "error"
+            );
+            els.checkAddressBtn.disabled = false;
+          });
+      })
+      .catch(function(){
+        renderCheckResult(
+          "<p>" + t("check_error_title") + "</p><p>" + t("check_error_body") + "</p>" + mapLinkHtml(),
+          "error"
+        );
+        els.checkAddressBtn.disabled = false;
+      });
+  }
+
+  /* ============================================================
+     STATE
+     ============================================================ */
+
+  var state = {
+    lang: "en",
+    firstName: "",
+    lastName: "",
+    cityZip: "",
+    story: "",
+    isResident: false,
+    previewDirty: false // true once user hand-edits subject/body directly
+  };
+
+  var els = {};
+  function q(id){ return document.getElementById(id); }
+
+  function cacheEls(){
+    ["firstName","lastName","cityZip","story","isResident",
+     "subjectPreview","bodyPreview","toList","resetBtn","charWarning",
+     "mailtoBtn","gmailBtn","copyEmailBtn","copyEmailMsg","copyAddrBtn","copyAddrMsg",
+     "meetingWhen","meetingWhere","meetingZoom","meetingAgenda","meetingDeadline","icsBtn",
+     "webShareBtn","copyLinkBtn","shareMsg","lastUpdated","btnEn","btnEs",
+     "addressInput","checkAddressBtn","checkResult","checkToggleBtn","addressCheckPanel"
+    ].forEach(function(id){ els[id] = q(id); });
+  }
+
+  /* ============================================================
+     RENDER
+     ============================================================ */
+
+  function t(key){
+    var s = STR[state.lang][key];
+    return (s === undefined) ? STR.en[key] : s;
+  }
+
+  function applyStaticI18n(){
+    document.documentElement.lang = state.lang;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var key = el.getAttribute("data-i18n");
+      el.innerHTML = t(key);
+    });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(function(el){
+      var key = el.getAttribute("data-i18n-placeholder");
+      el.setAttribute("placeholder", t(key));
+    });
+
+    els.btnEn.setAttribute("aria-pressed", String(state.lang === "en"));
+    els.btnEs.setAttribute("aria-pressed", String(state.lang === "es"));
+
+    if (els.checkToggleBtn.getAttribute("aria-expanded") === "true"){
+      els.checkToggleBtn.textContent = t("check_toggle_hide");
+    }
+
+    // To list
+    var names = BOARD_MEMBERS.map(function(m){ return m.name; });
+    els.toList.textContent = names.join(", ");
+
+    // Meeting box
+    els.meetingWhen.textContent = (state.lang === "es" ? MEETING.dateEs : MEETING.dateEn) + " · " + MEETING.time;
+    els.meetingWhere.textContent = MEETING.address;
+    els.meetingZoom.href = MEETING.zoomUrl;
+    els.meetingZoom.textContent = MEETING.zoomLabel;
+    els.meetingAgenda.href = MEETING.agendaUrl;
+    els.meetingDeadline.innerHTML = "<strong>" + t("meeting_deadline_label") + "</strong> " +
+      (state.lang === "es" ? MEETING.emailDeadlineEs : MEETING.emailDeadlineEn);
+
+    els.lastUpdated.textContent = t("last_updated").replace("{date}", LAST_UPDATED);
+  }
+
+  function currentFormData(){
+    return {
+      firstName: state.firstName,
+      lastName: state.lastName,
+      cityZip: state.cityZip,
+      story: state.story,
+      isResident: state.isResident
+    };
+  }
+
+  function regenerateTemplate(){
+    els.subjectPreview.value = subjectFor(state.lang);
+    els.bodyPreview.value = bodyFor(state.lang, currentFormData());
+    state.previewDirty = false;
+    updateCharWarning();
+    updateSendLinks();
+  }
+
+  function updateCharWarning(){
+    var full = els.subjectPreview.value + els.bodyPreview.value;
+    var n = full.length;
+    if (n > MAILTO_WARN_LIMIT){
+      els.charWarning.textContent = t("char_warning").replace("{n}", String(n));
+      els.charWarning.classList.add("show");
+    } else {
+      els.charWarning.classList.remove("show");
+      els.charWarning.textContent = "";
+    }
+  }
+
+  function toEmailString(){
+    return BOARD_MEMBERS.map(function(m){ return m.email; }).join(",");
+  }
+
+  function updateSendLinks(){
+    var subject = els.subjectPreview.value;
+    var body = els.bodyPreview.value;
+    var to = toEmailString();
+
+    els.mailtoBtn.href = "mailto:" + encodeURIComponent(to).replace(/%2C/g, ",") +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+
+    els.gmailBtn.href = "https://mail.google.com/mail/?view=cm&fs=1&to=" +
+      encodeURIComponent(to) +
+      "&su=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+
+    updateCharWarning();
+  }
+
+  /* ============================================================
+     EVENTS
+     ============================================================ */
+
+  function onFormInput(){
+    state.firstName = els.firstName.value;
+    state.lastName = els.lastName.value;
+    state.cityZip = els.cityZip.value;
+    state.story = els.story.value;
+    state.isResident = els.isResident.checked;
+    if (!state.previewDirty){
+      els.subjectPreview.value = subjectFor(state.lang);
+      els.bodyPreview.value = bodyFor(state.lang, currentFormData());
+      updateSendLinks();
+    }
+  }
+
+  function onPreviewEdit(){
+    state.previewDirty = true;
+    updateSendLinks();
+  }
+
+  function setLang(lang){
+    state.lang = lang;
+    applyStaticI18n();
+    clearCheckResult();
+    if (!state.previewDirty){
+      regenerateTemplate();
+    } else {
+      updateSendLinks();
+    }
+  }
+
+  function flashMsg(el, key){
+    el.textContent = t(key);
+    window.setTimeout(function(){
+      if (el.textContent === t(key)) el.textContent = "";
+    }, 2500);
+  }
+
+  function copyText(text){
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      return navigator.clipboard.writeText(text);
+    }
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch(e){}
+    document.body.removeChild(ta);
+    return Promise.resolve();
+  }
+
+  function wireEvents(){
+    els.btnEn.addEventListener("click", function(){ setLang("en"); });
+    els.btnEs.addEventListener("click", function(){ setLang("es"); });
+
+    [els.firstName, els.lastName, els.cityZip, els.story].forEach(function(el){
+      el.addEventListener("input", onFormInput);
+    });
+    els.isResident.addEventListener("change", onFormInput);
+
+    els.subjectPreview.addEventListener("input", onPreviewEdit);
+    els.bodyPreview.addEventListener("input", onPreviewEdit);
+
+    els.resetBtn.addEventListener("click", function(){
+      regenerateTemplate();
+    });
+
+    els.icsBtn.addEventListener("click", downloadICS);
+
+    els.checkAddressBtn.addEventListener("click", runAddressCheck);
+    els.addressInput.addEventListener("keydown", function(e){
+      if (e.key === "Enter"){
+        e.preventDefault();
+        runAddressCheck();
+      }
+    });
+
+    els.checkToggleBtn.addEventListener("click", function(){
+      var expanded = els.checkToggleBtn.getAttribute("aria-expanded") === "true";
+      els.checkToggleBtn.setAttribute("aria-expanded", String(!expanded));
+      els.addressCheckPanel.hidden = expanded;
+      els.checkToggleBtn.textContent = expanded ? t("check_toggle") : t("check_toggle_hide");
+      if (!expanded) els.addressInput.focus();
+    });
+
+    els.mailtoBtn.addEventListener("click", function(){
+      updateSendLinks();
+    });
+
+    els.copyEmailBtn.addEventListener("click", function(){
+      var full = "To: " + toEmailString() + "\n" +
+        "Subject: " + els.subjectPreview.value + "\n\n" +
+        els.bodyPreview.value;
+      copyText(full).then(function(){
+        flashMsg(els.copyEmailMsg, "copied");
+      });
+    });
+
+    els.copyAddrBtn.addEventListener("click", function(){
+      copyText(toEmailString()).then(function(){
+        flashMsg(els.copyAddrMsg, "copied");
+      });
+    });
+
+    var shareUrl = window.location.href;
+
+    els.webShareBtn.addEventListener("click", function(){
+      var text = t("share_text");
+      if (navigator.share){
+        navigator.share({ title: document.title, text: text, url: shareUrl }).catch(function(){});
+      } else {
+        copyText(text + " " + shareUrl).then(function(){
+          flashMsg(els.shareMsg, "link_copied");
+        });
+      }
+    });
+
+    els.copyLinkBtn.addEventListener("click", function(){
+      copyText(shareUrl).then(function(){
+        flashMsg(els.shareMsg, "link_copied");
+      });
+    });
+  }
+
+  /* ============================================================
+     INIT
+     ============================================================ */
+
+  function init(){
+    cacheEls();
+    wireEvents();
+    applyStaticI18n();
+    regenerateTemplate();
+  }
+
+  if (document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -646,7 +646,7 @@
       send_h2: "Send it",
       send_sub: "Sends from your own email app — nothing passes through this website.",
       send_mailto: "Open email app",
-      send_mailto_hint: "If \"Open email app\" opens a blank browser tab instead of your mail app, your computer doesn't have a default email app set — use \"Open in Gmail\" or \"Copy email text\" instead.",
+      send_mailto_hint: "Tap \"Open email app\" — don't long-press or \"copy link\" on it, that copies a scrambled-looking encoded link instead of your message. If it opens a blank tab instead of your mail app, your device doesn't have a default email app set — use \"Open in Gmail\" or \"Copy email text\" instead.",
       send_gmail: "Open in Gmail",
       send_copy_email: "Copy email text",
       send_copy_addr: "Copy board email addresses",
@@ -714,7 +714,7 @@
       send_h2: "Envíelo",
       send_sub: "Se envía desde su propia aplicación de correo — nada pasa por este sitio web.",
       send_mailto: "Abrir aplicación de correo",
-      send_mailto_hint: "Si \"Abrir aplicación de correo\" abre una pestaña en blanco en vez de su aplicación de correo, su computadora no tiene una aplicación de correo predeterminada — use \"Abrir en Gmail\" o \"Copiar texto del correo\" en su lugar.", // TRANSLATION REVIEW
+      send_mailto_hint: "Toque \"Abrir aplicación de correo\" — no lo mantenga presionado ni use \"copiar enlace\", eso copia un enlace codificado ilegible en vez de su mensaje. Si abre una pestaña en blanco en vez de su aplicación de correo, su dispositivo no tiene una aplicación de correo predeterminada — use \"Abrir en Gmail\" o \"Copiar texto del correo\" en su lugar.", // TRANSLATION REVIEW
       send_gmail: "Abrir en Gmail",
       send_copy_email: "Copiar texto del correo",
       send_copy_addr: "Copiar correos de la junta",
@@ -1157,18 +1157,31 @@
   }
 
   function copyText(text){
+    // execCommand first: in-app browsers (Instagram/Facebook/TikTok WebViews —
+    // the expected environment here, since this page is meant to be opened from
+    // a bio link in a Story) have shimmed/broken navigator.clipboard implementations
+    // that can resolve as "success" while actually writing something else (seen
+    // in the wild as garbled %-encoded text on paste). The old textarea+select+
+    // execCommand approach is far more reliable across those wrapper WebViews.
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.top = "-9999px";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    ta.setSelectionRange(0, text.length); // iOS Safari needs this in addition to select()
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    if (ok) return Promise.resolve();
+
     if (navigator.clipboard && navigator.clipboard.writeText){
       return navigator.clipboard.writeText(text);
     }
-    var ta = document.createElement("textarea");
-    ta.value = text;
-    ta.style.position = "fixed";
-    ta.style.opacity = "0";
-    document.body.appendChild(ta);
-    ta.select();
-    try { document.execCommand("copy"); } catch(e){}
-    document.body.removeChild(ta);
-    return Promise.resolve();
+    return Promise.reject(new Error("Copy not supported"));
   }
 
   function wireEvents(){
